@@ -26,6 +26,11 @@ const process = [
   ['03', 'Review your options', 'Receive clear recommendations without unnecessary confusion.'],
   ['04', 'Get comfortable', 'Professional installation and a system built around your home.'],
 ]
+const personalPrinciples = [
+  ['We listen before recommending', 'The right answer starts with understanding what you are experiencing at home.'],
+  ['We explain your options clearly', 'You get a straightforward view of the choices, without pressure or technical overload.'],
+  ['We treat your home with care', 'Thoughtful service means respecting your space as much as the equipment inside it.'],
+]
 
 function App() {
   const contactAvailable = COMPANY.phone || COMPANY.email || COMPANY.serviceArea
@@ -38,13 +43,13 @@ function App() {
           <div className="hero__copy">
             <p className="eyebrow">HEATING · COOLING · INDOOR AIR</p>
             <h1>Pure comfort.<br /><em>Built for home.</em></h1>
-            <p className="hero__lead">Professional heating, cooling, and indoor air quality solutions designed around comfort, efficiency, and the people who live there.</p>
+            <p className="hero__lead">Local heating, cooling, and indoor air specialists focused on comfort, clear guidance, and the people who live there.</p>
             <div className="button-group"><Button href="#contact">Get a Free Estimate</Button><Button href="#services" variant="secondary">Explore Our Services</Button></div>
             <p className="trust-line"><span>Professional solutions</span><span>Straightforward recommendations</span><span>Quality installation</span></p>
           </div>
-          <div className="hero__visual" aria-label="A calm, comfortable home environment">
+          <div className="hero__visual">
+            <img src={`${import.meta.env.BASE_URL}images/home-comfort.jpg`} alt="A family relaxing together in a comfortable living room" fetchPriority="high" />
             <div className="comfort-card"><span className="comfort-card__label">HOME COMFORT</span><strong>Made simple.</strong><p>One thoughtful system.<br />Every room in balance.</p><div className="comfort-scale"><i /><i /><i /><i /><i /></div></div>
-            <div className="hero__architecture" aria-hidden="true"><span /><span /><span /><span /></div>
           </div>
         </div>
       </section>
@@ -63,8 +68,13 @@ function App() {
         <div className="principles">{principles.map(([title, text], index) => <Reveal className="principle" key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></Reveal>)}</div>
       </div></section>
 
+      <section className="section personal"><div className="shell personal__grid">
+        <Reveal className="personal__photo"><img src={`${import.meta.env.BASE_URL}images/personal-service.jpg`} alt="A service professional having a thoughtful conversation with a family in their home" loading="lazy" /></Reveal>
+        <Reveal className="personal__copy"><p className="eyebrow">Service that still feels personal</p><h2>Your home isn’t another service ticket.</h2><p className="personal__lead">American Purity takes the time to understand the home, explain what is happening, and recommend the right path forward without unnecessary pressure.</p><div className="personal__principles">{personalPrinciples.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}</div></Reveal>
+      </div></section>
+
       <section className="section replacement"><div className="shell replacement__grid">
-        <Reveal className="replacement__visual"><div className="room-lines" aria-hidden="true"><i /><i /><i /><i /></div><p>A quieter system.<br />A more even home.<br /><strong>A better everyday.</strong></p></Reveal>
+        <Reveal className="replacement__visual"><img src={`${import.meta.env.BASE_URL}images/system-installation.jpg`} alt="A technician carefully checking residential air conditioning equipment" loading="lazy" /><div className="replacement__overlay" /><p>A quieter system.<br />A more even home.<br /><strong>A better everyday.</strong></p></Reveal>
         <Reveal className="replacement__copy"><p className="eyebrow">System replacement</p><h2>When it’s time for something better</h2><p>Uneven temperatures, rising energy costs, frequent repairs, and loud or aging equipment can be signs that it is time to look ahead.</p><ul><li>Understand what your home actually needs</li><li>Compare options without the technical overload</li><li>Choose around your budget and comfort goals</li></ul><Button href="#contact">Request a System Estimate</Button></Reveal>
       </div></section>
 
