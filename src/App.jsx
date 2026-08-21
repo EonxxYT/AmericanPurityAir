@@ -48,7 +48,7 @@ function App() {
             <p className="trust-line"><span>Professional solutions</span><span>Straightforward recommendations</span><span>Quality installation</span></p>
           </div>
           <div className="hero__visual">
-            <img src={`${import.meta.env.BASE_URL}images/home-comfort.jpg`} alt="A family relaxing together in a comfortable living room" fetchPriority="high" />
+            <img src={`${import.meta.env.BASE_URL}images/home-comfort.jpg`} alt="An HVAC technician showing a homeowner how to use a modern smart thermostat" fetchPriority="high" />
             <div className="comfort-card"><span className="comfort-card__label">HOME COMFORT</span><strong>Made simple.</strong><p>One thoughtful system.<br />Every room in balance.</p><div className="comfort-scale"><i /><i /><i /><i /><i /></div></div>
           </div>
         </div>
@@ -69,7 +69,7 @@ function App() {
       </div></section>
 
       <section className="section personal"><div className="shell personal__grid">
-        <Reveal className="personal__photo"><img src={`${import.meta.env.BASE_URL}images/personal-service.jpg`} alt="A service professional having a thoughtful conversation with a family in their home" loading="lazy" /></Reveal>
+        <Reveal className="personal__photo"><img src={`${import.meta.env.BASE_URL}images/personal-service.jpg`} alt="A clean residential HVAC condenser installation with neatly routed lines" loading="lazy" /></Reveal>
         <Reveal className="personal__copy"><p className="eyebrow">Service that still feels personal</p><h2>Your home isn’t another service ticket.</h2><p className="personal__lead">American Purity takes the time to understand the home, explain what is happening, and recommend the right path forward without unnecessary pressure.</p><div className="personal__principles">{personalPrinciples.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}</div></Reveal>
       </div></section>
 
