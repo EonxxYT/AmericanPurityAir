@@ -24,7 +24,7 @@ export default function Navbar() {
         <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}><span /><span /></button>
         <div id="mobile-menu" className={`nav__links ${open ? 'is-open' : ''}`}>
           {NAV_LINKS.map((link) => <a key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</a>)}
-          <Button href="#contact" className="nav__cta" onClick={() => setOpen(false)}>Get a Free Estimate</Button>
+          <Button href="#contact" className="nav__cta" onClick={() => setOpen(false)}>Request an Estimate</Button>
         </div>
       </nav>
     </header>

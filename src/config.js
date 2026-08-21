@@ -6,9 +6,10 @@ export const COMPANY = {
 }
 
 export const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
   { label: 'Why Us', href: '#why-us' },
+  { label: 'Our Process', href: '#process' },
   { label: 'Financing', href: '#financing' },
+  { label: 'About Us', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
